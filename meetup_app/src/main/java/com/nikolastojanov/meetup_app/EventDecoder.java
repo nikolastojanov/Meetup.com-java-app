@@ -15,13 +15,10 @@ public class EventDecoder implements JSONDecoder{
             JSONParser parser = new JSONParser();
             JSONObject object = (JSONObject) parser.parse(requested);
             JSONArray results = (JSONArray) object.get("results");
-            System.out.println("Ovo je lista svih meetupa za izabrani grad");
+            System.out.println("Ovo je lista svih meetupa za izabrani grad\n");
             
-            if(results != null) System.out.println("radi");
-            else System.out.println(" ne radi");
             Iterator k = results.iterator();
             
-            Iterator i = results.iterator();
             while(k.hasNext()){
                 JSONObject event = (JSONObject) k.next();
                 

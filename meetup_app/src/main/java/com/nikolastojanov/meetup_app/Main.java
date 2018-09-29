@@ -38,7 +38,7 @@ public class Main {
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
-        System.out.println("program je zavrsio sa radom i automatski ce se ugasiti za 60 sekundi.\n Ako zelite informacije za drugi grad ponovo pokrenite program");
+        System.out.println("program je zavrsio sa radom i automatski ce se ugasiti za 60 sekundi.\nAko zelite informacije za drugi grad ponovo pokrenite program");
         try {
             Thread.sleep(60000);
         } catch (InterruptedException ex) {

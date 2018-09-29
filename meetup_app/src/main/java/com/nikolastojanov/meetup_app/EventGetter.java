@@ -18,25 +18,25 @@ public class EventGetter implements Request{
 
     @Override
     public String SendRequest(String PathCode, String key) throws Exception {
-        
-        String response;
-        
-        URI request = new URIBuilder()
-                .setScheme("http")
-                .setHost("api.meetup.com")
-                .setPath(PathCode)
-                .setParameter("city", city)
-                .setParameter("key", key)
-                .build();
-        
-        HttpGet get = new HttpGet(request);
-        
-        CloseableHttpClient httpclient = HttpClients.createDefault();
-        CloseableHttpResponse httpresponse = httpclient.execute(get);
-        
-        response = EntityUtils.toString(httpresponse.getEntity());
-        
-        return response;
+        System.out.println(city);
+        String responseString = "";
+ 
+        URI request = new URIBuilder()			
+		.setScheme("http")
+		.setHost("api.meetup.com")
+		.setPath(PathCode)
+                .setParameter("country", "rs")
+		.setParameter("city", city)
+		.setParameter("key", key)
+		.build();
+ 
+	HttpGet get = new HttpGet(request);			
+ 
+	CloseableHttpClient client = HttpClients.createDefault();
+	CloseableHttpResponse response = client.execute(get);
+	responseString = EntityUtils.toString(response.getEntity());
+                
+	return responseString;
 
     }
     
