@@ -13,16 +13,6 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20180813</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.jersey</groupId>
-            <artifactId>jersey-json</artifactId>
-            <version>1.19.4</version>
-        </dependency>
-        <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
@@ -44,7 +34,7 @@
        <archive>
           <manifest>
 
-              <mainClass>com.nikolastojanov.meetup_app.main</mainClass>
+              <mainClass>com.nikolastojanov.meetup_app.Main</mainClass>
           </manifest>
        </archive>
     </configuration>
